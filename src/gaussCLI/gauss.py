@@ -1,5 +1,5 @@
 import numpy as np
-from printer import Log
+from .printer import Log
   
 class GaussMethods:
     def __init__(self , matrix):

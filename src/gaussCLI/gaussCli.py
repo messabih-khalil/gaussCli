@@ -1,7 +1,7 @@
-from printer import Log
-from matrixOperations import userDefine , fillMatrix
+from .printer import Log , md
+from .matrixOperations import userDefine , fillMatrix
 from rich.console import Console
-from gauss import Gauss
+from .gauss import Gauss
 
 
 console = Console()
@@ -11,6 +11,8 @@ class GaussCliMethods:
         self.matrix = None
         self.result = None
 
+    def markdown(self):
+        console.print(md)
     # print user define
     def userMatrix(self):
         self.matrix = userDefine()
@@ -43,10 +45,10 @@ class GaussCliMethods:
 
 class GaussCLI(GaussCliMethods):
     def __init__(self):
+        super().markdown()
         super().userMatrix()
         super().fillMatrix()
         super().printProgress()
         super().gaussCalculator()
         super().printResult()
 
-gauss = GaussCLI()

@@ -12,11 +12,9 @@ gauss elimination CLI Tool :
 1. Solve equation (matrix) type of n*n 
 2. Show steps of solving
 """
-from rich.console import Console
-from rich.markdown import Markdown
 
 md = Markdown(MARKDOWN)
-console.print(md)
+
 
 class Log():
     def __init__(self , l1 = None , l2 = None , matrix = None):

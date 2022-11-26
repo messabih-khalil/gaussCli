@@ -1,5 +1,5 @@
 from rich.console import Console
-from printer import Log
+from .printer import Log
 import numpy as np
 
 console = Console()
